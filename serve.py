@@ -15,7 +15,7 @@ def handle_requests():
         return jsonify(private_ip=private_ip)
 
 def start_cpu_stress_process():
-    subprocess.Popen(['python', 'stress_cpu.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.Popen(['python', 'stress_cpu.py'])
 
 def get_private_ip():
     private_ip = socket.gethostbyname(socket.gethostname())
