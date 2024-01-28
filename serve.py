@@ -15,7 +15,7 @@ def handle_requests():
         return str(private_ip)
 
 def start_cpu_stress_process():
-    subprocess.Popen(['python', 'stress_cpu.py'])
+    subprocess.Popen(['python3', 'stress_cpu.py'])
 
 def get_private_ip():
     private_ip = socket.gethostbyname(socket.gethostname())
