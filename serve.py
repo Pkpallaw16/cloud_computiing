@@ -8,11 +8,11 @@ app = Flask(__name__)
 def handle_requests():
     if request.method == 'POST':
         start_cpu_stress_process()
-        return jsonify(message='CPU stress process started')
+        return str(' ')
 
     elif request.method == 'GET':
         private_ip = get_private_ip()
-        return jsonify(private_ip=private_ip)
+        return str(private_ip)
 
 def start_cpu_stress_process():
     subprocess.Popen(['python', 'stress_cpu.py'])
